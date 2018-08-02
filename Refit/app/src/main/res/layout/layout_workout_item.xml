@@ -29,7 +29,7 @@
         android:layout_alignBottom="@+id/workout_image"
         android:layout_alignStart="@+id/workout_name"
         android:digits="0123456789"
-        android:inputType="phone"
+        android:inputType="numberPassword|phone"
         android:text="0"
         android:textColor="#000"
         android:textSize="20sp" />

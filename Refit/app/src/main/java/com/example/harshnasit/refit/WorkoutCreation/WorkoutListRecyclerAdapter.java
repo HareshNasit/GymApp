@@ -64,7 +64,7 @@ public class WorkoutListRecyclerAdapter extends RecyclerView.Adapter<WorkoutList
         holder.layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(context, "Index: " + holder.getAdapterPosition(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, exerciseList.get(holder.getAdapterPosition()).getName(), Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -76,7 +76,7 @@ public class WorkoutListRecyclerAdapter extends RecyclerView.Adapter<WorkoutList
 
     @Override
     public boolean onItemMove(int fromPosition, int toPosition) {
-
+        Collections.swap(exerciseList, fromPosition, toPosition);
         notifyItemMoved(fromPosition, toPosition);
         return true;
     }
